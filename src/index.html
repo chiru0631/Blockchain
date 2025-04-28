@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Verification</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>CertVerify</h1>
+    <button id="connectBtn">🔗 Connect Wallet</button>
+    
+    <div id="roleSection" style="display:none;">
+      <h2>Select Role</h2>
+      <button id="studentBtn">🎓 Student</button>
+      <button id="verifierBtn">🛠 Verifier</button>
+    </div>
+
+    <div id="studentUI" style="display:none;">
+      <h3>Student Dashboard</h3>
+      <button id="registerBtn">Register</button>
+      <button id="viewCertBtn">View Certificates</button>
+      <ul id="studentCerts"></ul>
+    </div>
+
+    <div id="verifierUI" style="display:none;">
+      <h3>Verifier Dashboard</h3>
+      <input id="vAddr" placeholder="Student Address">
+      <input id="vName" placeholder="Student Name">
+      <input id="vSubject" placeholder="Subject">
+      <input id="vHash" placeholder="IPFS Hash">
+      <button id="issueBtn">Issue Certificate</button>
+    </div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
